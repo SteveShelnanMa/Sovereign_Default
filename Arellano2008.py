@@ -5,10 +5,6 @@
 ##                       15 Jan, 2021                         ##
 ################################################################
 
-'''
-The file borrowed some code from https://python-advanced.quantecon.org/arellano.html
-I acknowledge the priceless work from QuantEcon (https://quantecon.org)
-'''
 
 
 !pip install --upgrade quantecon
