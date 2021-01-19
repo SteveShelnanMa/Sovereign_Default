@@ -1,8 +1,8 @@
 
 ################################################################
-##                    ECON509 Homework 0                      ## 
+##                   University of Rochester                  ## 
 ##                        Xiaonan Ma                          ##
-##                       18 Jan, 2021                         ##
+##                       19 Jan, 2021                         ##
 ################################################################
 
 
@@ -17,7 +17,7 @@ from numba import jit, jitclass, int64, float64
 %matplotlib inline
 
 #################################################################
-#  In this part, I solve the question No.1,2,3,4 by:            #
+#  In this part:                                                #
 #     setting the parameter values up,                          #
 #     setting up the value functions in terms of default,       #
 #     discretizing the AR(1) process for y using Tauchen method #
@@ -167,7 +167,7 @@ ae2 = Arellano_Economy(
 )
 
 #################################################################
-#  In this part, I solve the question No.5, 6, 7, 8 by:         #
+#  In this part:                                                #
 #     setting up the initial guesses in the solve() function,   #
 #     solving the model using VFI,                              #
 #     and replicating figures                                   #
@@ -227,6 +227,9 @@ def solve(model, tol=1e-05, maxiter=10_000):
         dist = np.max((np.abs(Vupd - V))/(1+np.abs(V)))
         V[:, :] = Vupd[:, :]
         it += 1
+        if it % 50==0:
+            print("Current iteration number: ",it)
+    print("Total iteration number: ", it)
 
     return V, Vc, Vd, iBstar, default_prob, default_states, q
 
