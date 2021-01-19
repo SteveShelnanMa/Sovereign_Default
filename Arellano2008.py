@@ -6,7 +6,6 @@
 ################################################################
 
 
-
 !pip install --upgrade quantecon
 import matplotlib.pyplot as plt
 import mpl_toolkits.axisartist as axisartist
@@ -17,7 +16,7 @@ from numba import jit, jitclass, int64, float64
 %matplotlib inline
 
 #################################################################
-#  In this part, I solve the question No.1,2,3,4 by:            #
+#  In this part, what I did are:                                #
 #     setting the parameter values up,                          #
 #     setting up the value functions in terms of default,       #
 #     discretizing the AR(1) process for y using Tauchen method #
@@ -160,14 +159,14 @@ ae = Arellano_Economy(
     y_hat = y_hat1
 )
 
-# parameters for figure 2: y is iid, θ=0, h(y)=y
+# parameters for figure 2 (y is iid, θ=0, h(y)=y)
 ae2 = Arellano_Economy(
     Bgrid, P2, ygrid, β=β, σ=σ, r=r, ρ=ρ, η=η, θ=θ2,
     y_hat = y_hat2
 )
 
 #################################################################
-#  In this part, I solve the question No.5, 6, 7, 8 by:         #
+#  In this part, what I did are:                                #
 #     setting up the initial guesses in the solve() function,   #
 #     solving the model using VFI,                              #
 #     and replicating figures                                   #
