@@ -14,7 +14,7 @@ import numpy as np
 import quantecon as qe
 import random
 from numba import jit, jitclass, int64, float64
-%matplotlib inline
+%matplotlib inline     # for better notebook display
 
 #################################################################
 #  In this part:                                                #
