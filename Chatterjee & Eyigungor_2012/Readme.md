@@ -1,4 +1,3 @@
-#Readme
 
 Replicate the AER paper by Satyajit Chatterjee and Burcu Eyigungor,2012.
 
