@@ -1,3 +1,5 @@
+#Readme
+
 Replicate the AER paper by Satyajit Chatterjee and Burcu Eyigungor,2012.
 
 The codes are provided by the authors from the link:
